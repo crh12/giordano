@@ -70,13 +70,14 @@ main .container .item_wrap .best_new_swiper .swiper-wrapper .swiper-slide .item_
 main .container .item_wrap .best_new_swiper .swiper-wrapper .swiper-slide .item_price_like .like img {width: 100%;}
 main .container .item_wrap .item_slide_btn {position: absolute; left: 0; top: 172px; z-index: 10; width: 100%;}
 main .container .item_wrap .item_slide_btn button {}
-main .container .item_wrap .item_slide_btn button.prev {}
-main .container .item_wrap .item_slide_btn button.next {position: absolute; right: 0; transform: scaleX(-1);}
+main .container .item_wrap .item_slide_btn .prev {}
+main .container .item_wrap .item_slide_btn .next {position: absolute; right: 0; transform: scaleX(-1);}
 /* -------------------------------------------------------------------------------------------- BEST */
 /* -------------------------------------------------------------------------------------------- NEW */
 /* -------------------------------------------------------------------------------------------- EVENT */
 main .event_container {width: 100%; max-width: 1600px; display: flex; flex-flow: row nowrap;}
-main .event_container img {width: 100%;}
+main .event_container a {width: 100%;}
+main .event_container a img {width: 100%;}
 /* -------------------------------------------------------------------------------------------- MD's PICK */
 main .md_container {}
 main .md_container .title {}
@@ -96,8 +97,8 @@ main .md_container .md_contents_wrap .md_swiper .md_progress span {}
 main .md_container .md_contents_wrap .md_swiper .md_progress .slide_current {}
 main .md_container .md_contents_wrap .md_swiper .md_slide_btn {}
 main .md_container .md_contents_wrap .md_swiper .md_slide_btn button {}
-main .md_container .md_contents_wrap .md_swiper .md_slide_btn button.prev {}
-main .md_container .md_contents_wrap .md_swiper .md_slide_btn button.next {}
+main .md_container .md_contents_wrap .md_swiper .md_slide_btn .prev {}
+main .md_container .md_contents_wrap .md_swiper .md_slide_btn .next {}
 main .md_container .md_contents_wrap .md_item_list {width: 610px; display: flex; flex-flow: row wrap; justify-content: space-between;}
 main .md_container .md_contents_wrap .md_item_list li {width: 300px; height: 340px;}
 main .md_container .md_contents_wrap .md_item_list li:first-child {margin-bottom: 10px;}
@@ -132,7 +133,7 @@ main .gmotion_container .cartegory li a.active {}
 main .gmotion_container .cartegory li.more {}
 main .gmotion_container .cartegory li.more a {}
 main .gmotion_container .cartegory li.more a img {}
-main .gmotion_container .g_swiper {}
+main .gmotion_container .g_swiper {width: 100%; margin-bottom: 30px;}
 main .gmotion_container .g_swiper .swiper-wrapper {}
 main .gmotion_container .g_swiper .swiper-wrapper .swiper-slide {}
 main .gmotion_container .g_swiper .swiper-wrapper .g_slide1 {}
@@ -140,8 +141,8 @@ main .gmotion_container .g_swiper .swiper-wrapper .g_slide2 {}
 main .gmotion_container .g_swiper .swiper-wrapper .g_slide3 {}
 main .gmotion_container .g_swiper .swiper-wrapper .g_slide4 {}
 main .gmotion_container .g_swiper .swiper-wrapper .g_slide5 {}
-main .gmotion_container .g_swiper .swiper-wrapper .swiper-slide p.main_img {}
-main .gmotion_container .g_swiper .swiper-wrapper .swiper-slide p.main_img img {}
+main .gmotion_container .g_swiper .swiper-wrapper .swiper-slide p.main_img {width: 360px; height: 450px;}
+main .gmotion_container .g_swiper .swiper-wrapper .swiper-slide p.main_img img {width: 100%;}
 main .gmotion_container .g_swiper .swiper-wrapper .swiper-slide .g_item_list {}
 main .gmotion_container .g_swiper .swiper-wrapper .swiper-slide .g_item_list li {}
 main .gmotion_container .g_swiper .swiper-wrapper .swiper-slide .g_item_list li a.item_img {}
@@ -149,4 +150,14 @@ main .gmotion_container .g_swiper .swiper-wrapper .swiper-slide .g_item_list li 
 main .gmotion_container .g_swiper .swiper-wrapper .swiper-slide .g_item_list li a.item_name_price {}
 main .gmotion_container .g_swiper .swiper-wrapper .swiper-slide .g_item_list li a.item_name_price span {}
 main .gmotion_container .g_swiper .swiper-wrapper .swiper-slide .g_item_list li a.item_name_price em {}
-main .gmotion_container .g_swiper .swiper-wrapper .swiper-slide .g_item_list li button.like {}
+main .gmotion_container .g_swiper .swiper-wrapper .swiper-slide .g_item_list li button.like {width: 16px;}
+main .gmotion_container .g_swiper .swiper-wrapper .swiper-slide .g_item_list li button.like img {width: 100%;}
+main .gmotion_container .swiper_progress {width: 100%; display: flex; justify-content: space-between; align-items: center;}
+main .gmotion_container .swiper_progress .progress_bar {width: 1500px; height: 2px; background-color: #ddd;}
+main .gmotion_container .swiper_progress .progress_bar .active_bar {width: calc(100% / 2); height: 100%; background-color: #000;}
+main .gmotion_container .swiper_progress .progress_btn {}
+main .gmotion_container .swiper_progress .progress_btn button {width: 20px;}
+main .gmotion_container .swiper_progress .progress_btn button img {width: 100%;}
+main .gmotion_container .swiper_progress .progress_btn .prev {}
+main .gmotion_container .swiper_progress .progress_btn .next {transform: scaleX(-1);}
+main .gmotion_container .swiper_progress .progress_btn .slide_current {}
