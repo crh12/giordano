@@ -28,6 +28,9 @@ const bestSwiper = new Swiper('.best_swiper1',{
   slidesPerView:5,
   spaceBetween:25,
 });
+// bestSwiper.addEventListener('mouseover',()={
+
+// })
 
 const newSwiper = new Swiper('.new_swiper1',{
   loop:true,
@@ -44,7 +47,11 @@ const mdSwiper = new Swiper('.md_swiper',{
   navigation:{
     nextEl:'.md_slide_btn .next',
     prevEl:'.md_slide_btn .prev',
-  }
+  },
+  pagination: {
+    el: '.md_swiper .swiper-pagination',
+    clickable: true,
+  },
 });
 
 const gSwiper = new Swiper('.g_swiper',{
@@ -56,8 +63,13 @@ const gSwiper = new Swiper('.g_swiper',{
   slidesPerView:4,
   slidesPerGroup:4,
   spaceBetween:(160 / 3),
-  pagination:{
-    el:'.gmotion_container .slide_current',
-    type:'fraction',
-  }
+});
+
+const mgzSwiper = new Swiper('.mgz_swiper',{
+  loop:true,
+  // centeredSlides:true,
+  navigation:{
+    nextEl:'.mgz_slide_btn .next',
+    prevEl:'.mgz_slide_btn .prev',
+  },
 });
