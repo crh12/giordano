@@ -1,7 +1,5 @@
 const thumnail = document.querySelectorAll('.thum_wrap a img');
 const bigImg = document.querySelector('.p_img img');
-console.log(thumnail,bigImg)
-console.log(bigImg.src)
 
 function bigSrc(num){
   return bigImg.src = `./images/productImg_00${num}.jpg`;
@@ -25,3 +23,108 @@ thumnail[4].addEventListener('mouseover', function(){
 thumnail[5].addEventListener('mouseover', function(){
   bigSrc(6);
 })
+
+// ------------------------------------------------------------ 변수
+const like = document.querySelector('.like img');
+const share = document.querySelector('.share');
+const shareOpen = document.querySelector('.share_open');
+const color = document.querySelectorAll('.color dd a');
+const size = document.querySelectorAll('.size dd a');
+const productNum = document.querySelector('#product_num');
+const numMinus = document.querySelector('#minus');
+const numPlus = document.querySelector('#plus');
+const totalPrice = document.querySelector('.total_contents .total_price');
+
+let price = 89100; // 주문금액
+let number = 0; // 주문수량
+let orderPrice = 0; // 총 가격 저장 변수
+
+
+// ------------------------------------------------------------ 함수
+function colorReset(){
+  for(let i of color) i.classList.remove('color_active');
+};
+
+function sizeReset(){
+  for(let i of size) i.classList.remove('size_active');
+};
+
+function likeOn(){
+  if (like.classList = 'like_active') {console.log('참')
+  } else (console.log('거짓'));
+}
+
+// ------------------------------------------------------------ 초기세팅
+shareOpen.style.display = 'none';
+colorReset();
+sizeReset();
+
+// ------------------------------------------------------------ 이벤트 실행
+like.addEventListener('click',(e)=>{
+  like.classList.toggle('like_active');
+  e.preventDefault();
+  console.log(like,like.src, like.classList)
+});
+
+
+share.addEventListener('mouseover',()=>{
+  shareOpen.style.display = 'flex';
+});
+shareOpen.addEventListener('mouseover',()=>{
+  shareOpen.style.display = 'flex';
+});
+shareOpen.addEventListener('mouseout',()=>{
+  shareOpen.style.display = 'none';
+});
+
+for(let i of color){
+  i.addEventListener('click',(e)=>{
+    e.preventDefault();
+    colorReset();
+    i.classList.toggle('color_active')
+  })
+};
+
+for(let i of size){
+  i.addEventListener('click',(e)=>{
+    e.preventDefault();
+    sizeReset();
+    i.classList.toggle('size_active')
+  })
+};
+
+numMinus.addEventListener('click',()=>{
+  if (productNum.value > 0) number--;
+  productNum.value = number;
+  orderPrice = price * number;
+  totalPrice.textContent = `${orderPrice}`
+});
+
+numPlus.addEventListener('click',()=>{
+  number++;
+  productNum.value = number;
+  orderPrice = price * number;
+  totalPrice.textContent = `${orderPrice.toLocaleString('ko-kr')}`
+});
+
+// ------------------------------------------------------------ 스와이퍼
+const purSwiper = new Swiper('.pur_swiper', {
+  loop:true,
+  slidesPerView:4,
+  spaceBetween:(40 / 3),
+  navigation:{
+    nextEl:'.pur_swiper .next',
+    prevEl:'.pur_swiper .prev',
+  },
+
+});
+
+const simSwiper = new Swiper('.sim_swiper', {
+  loop:true,
+  slidesPerView:4,
+  spaceBetween:(40 / 3),
+  navigation:{
+    nextEl:'.sim_swiper .next',
+    prevEl:'.sim_swiper .prev',
+  },
+});
