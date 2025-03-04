@@ -15,6 +15,8 @@
   <link rel="stylesheet" href="./styles/reset.css">
   <link rel="stylesheet" href="./styles/common.css">
   <link rel="stylesheet" href="./styles/item_detail.css">
+  <link rel="stylesheet" href="./styles/responsive_common.css">
+  <link rel="stylesheet" href="./styles/responsive_item_detail.css">
   <!-- JS -->
   <script src="./scripts/common.js" defer></script>
   <script src="./scripts/item_detail.js" defer></script>
@@ -134,6 +136,68 @@
         <li><a href="#"><img src="./images/search.png" alt="검색"></a></li>
         <li><a href="#"><img src="./images/cart.png" alt="장바구니"></a></li>
         <li><a href="#"><img src="./images/login.png" alt="로그인"></a></li>
+        <li class="m_menu"><a href="#"><img src="./images/menu.png" alt="모바일메뉴열기"></a></li>
+        <li class="m_close"><a href="#"><img src="./images/more.png" alt="모바일메뉴닫기"></a></li>
+      </ul>
+      <ul class="m_gnb">
+        <li><a href="#"><span>PROMOTION</span></a>
+          <ul class="lnb">
+            <li><a href="./men_outer.html">EVENTS</a></li>
+            <li><a href="./men_outer.html">MEMBERSHIP</a></li>
+          </ul>
+        </li>
+        <li><a href="#">BEST</a>
+          <ul class="lnb">
+            <li><a href="./men_outer.html">MEN</a></li>
+            <li><a href="./men_outer.html">WOMEN</a></li>
+          </ul>
+        </li>
+        <li><a href="#">NEW</a>
+          <ul class="lnb">
+            <li><a href="./men_outer.html">MEN</a></li>
+            <li><a href="./men_outer.html">WOMEN</a></li>
+          </ul>
+        </li>
+        <li><a href="#">MEN</a>
+          <ul class="lnb">
+            <li><a href="./men_outer.html">아우터</a></li>
+            <li><a href="./men_outer.html">상의</a></li>
+            <li><a href="./men_outer.html">하의</a></li>
+            <li><a href="./men_outer.html">홈 & 언더웨어</a></li>
+            <li><a href="./men_outer.html">ACC</a></li>
+          </ul>
+        </li>
+        <li><a href="#">WOMEN</a>
+          <ul class="lnb">
+            <li><a href="./men_outer.html">아우터</a></li>
+            <li><a href="./men_outer.html">상의</a></li>
+            <li><a href="./men_outer.html">하의</a></li>
+            <li><a href="./men_outer.html">홈 & 언더웨어</a></li>
+            <li><a href="./men_outer.html">ACC</a></li>
+          </ul>
+        </li>
+        <li><a href="#">G-MOTION</a>
+          <ul class="lnb">
+            <li><a href="./men_outer.html">MEN</a></li>
+            <li><a href="./men_outer.html">WOMEN</a></li>
+          </ul>
+        </li>
+        <li><a href="#">SALE</a>
+          <ul class="lnb">
+            <li><a href="./men_outer.html">MEN</a></li>
+            <li><a href="./men_outer.html">WOMEN</a></li>
+            <li><a href="./men_outer.html">LAST CHANCE</a></li>
+          </ul>
+        </li>
+        <li><a href="#">MAGAZINE</a>
+          <ul class="lnb">
+            <li><a href="./men_outer.html"># 변우석 PICK</a></li>
+            <li><a href="./men_outer.html"># 차은우 PICK</a></li>
+            <li><a href="./men_outer.html"># 한소희 PICK</a></li>
+            <li><a href="./men_outer.html"># 인플루언서 아우터스타일링</a></li>
+            <li><a href="./men_outer.html"># WINTER COLLECTION</a></li>
+          </ul>
+        </li>
       </ul>
     </div>
   </header>
@@ -166,12 +230,12 @@
         <div class="name_share_contents">
           <h1 class="p_name">울캐시 더블 코트</h1>
           <div class="like_share_wrap">
-            <a href="#" class="like"><img src="./images/like_red_24.png" alt=""></a>
+            <a href="#" class="like24"><img src="./images/like_red_24.png" alt=""></a>
             <a href="#" class="share"><img src="./images/share_24.png" alt=""></a>
             <span class="share_open">
               <a href="#"><img src="./images/arrowDown_24.png" alt=""></a>
-              <a href="#"><img src="./images/share_talk.png" alt=""></a>
-              <a href="#"><img src="./images/share_url.png" alt=""></a>
+              <a href="#" class="share_kakao"></a>
+              <a href="#" class="share_url"></a>
             </span>
           </div>
         </div>
@@ -264,6 +328,7 @@
           <button type="button" id="buy_btn">바로구매</button>
         </div>
       </div>
+      <!-- 상품 정보 (하단) -->
       <div class="codi_container container">
         <h3>코디 상품</h3>
         <ul class="codi_list">
@@ -274,7 +339,7 @@
               <em>53,100원</em>
               <span>89,800원</span>
               <em class="sale_rate">40%</em>
-              <button type="button" class="like"><img src="./images/like.png" alt="위시리스트"></button>
+              <button type="button" class="like"><img src="./images/like_16.png" alt="위시리스트"></button>
             </div>
           </li>
           <li class="item2">
@@ -284,7 +349,7 @@
               <em>53,100원</em>
               <span>89,800원</span>
               <em class="sale_rate">40%</em>
-              <button type="button" class="like"><img src="./images/like.png" alt="위시리스트"></button>
+              <button type="button" class="like"><img src="./images/like_16.png" alt="위시리스트"></button>
             </div>
           </li>
           <li class="item3">
@@ -294,25 +359,29 @@
               <em>53,100원</em>
               <span>89,800원</span>
               <em class="sale_rate">40%</em>
-              <button type="button" class="like"><img src="./images/like.png" alt="위시리스트"></button>
+              <button type="button" class="like"><img src="./images/like_16.png" alt="위시리스트"></button>
             </div>
           </li>
         </ul>
       </div>
+      <ul class="d_title">
+        <li class="active"><a href="#">상세정보</a></li>
+        <li><a href="#">상품정보고시</a></li>
+        <li><a href="#">리뷰 (65)</a></li>
+        <li><a href="#">추천상품</a></li>
+      </ul>
       <div class="detail_container container">
-        <ul class="d_title">
-          <li class="active">상세정보</li>
-          <li>상품정보고시</li>
-          <li>리뷰 (65)</li>
-          <li>추천상품</li>
-        </ul>
         <ul class="d_content">
-          <li><img src="./images/detail_001.jpg" alt=""><img src="./images/detail_002.jpg" alt=""><img src="./images/detail_003.jpg" alt=""></li>
-          <li><img src="" alt=""></li>
-          <li><img src="" alt=""></li>
-          <li><img src="" alt=""></li>
+          <li>
+            <img src="./images/detail_001.jpg" alt="">
+            <img src="./images/detail_002.jpg" alt="">
+            <img src="./images/detail_003.jpg" alt=""></li>
+          <li><img src="./images/detail_info.jpg" alt=""></li>
         </ul>
-        <button type="button" id="d_more">펼쳐보기<img src="./images/arrowDown_15.png" alt=""></button>
+        <button type="button" id="d_more">
+          <span>펼쳐보기</span>
+          <img src="./images/arrowDown_15.png" alt="">
+        </button>
       </div>
       <div class="review_container container">
         <h3>상품 리뷰 <span>65</span></h3>
@@ -651,7 +720,7 @@
                 <em>53,820원</em>
                 <span>59,800원</span>
                 <em class="sale_rate">10%</em>
-                <button type="button" class="like"><img src="./images/like.png" alt="위시리스트"></button>
+                <button type="button" class="like"><img src="./images/like_16.png" alt="위시리스트"></button>
               </div>
             </div>
             <div class="swiper-slide pur_slide2">
@@ -661,7 +730,7 @@
                 <em>26,820원</em>
                 <span>29,800원</span>
                 <em class="sale_rate">10%</em>
-                <button type="button" class="like"><img src="./images/like.png" alt="위시리스트"></button>
+                <button type="button" class="like"><img src="./images/like_16.png" alt="위시리스트"></button>
               </div>
             </div>
             <div class="swiper-slide pur_slide3">
@@ -671,7 +740,7 @@
                 <em>11,520원</em>
                 <span>12,800원</span>
                 <em class="sale_rate">10%</em>
-                <button type="button" class="like"><img src="./images/like.png" alt="위시리스트"></button>
+                <button type="button" class="like"><img src="./images/like_16.png" alt="위시리스트"></button>
               </div>
             </div>
             <div class="swiper-slide pur_slide4">
@@ -681,7 +750,7 @@
                 <em>34,100원</em>
                 <span>69,800원</span>
                 <em class="sale_rate">10%</em>
-                <button type="button" class="like"><img src="./images/like.png" alt="위시리스트"></button>
+                <button type="button" class="like"><img src="./images/like_16.png" alt="위시리스트"></button>
               </div>
             </div>
             <div class="swiper-slide pur_slide5">
@@ -691,7 +760,7 @@
                 <em>53,820원</em>
                 <span>59,800원</span>
                 <em class="sale_rate">10%</em>
-                <button type="button" class="like"><img src="./images/like.png" alt="위시리스트"></button>
+                <button type="button" class="like"><img src="./images/like_16.png" alt="위시리스트"></button>
               </div>
             </div>
             <div class="swiper-slide pur_slide6">
@@ -701,7 +770,7 @@
                 <em>26,820원</em>
                 <span>29,800원</span>
                 <em class="sale_rate">10%</em>
-                <button type="button" class="like"><img src="./images/like.png" alt="위시리스트"></button>
+                <button type="button" class="like"><img src="./images/like_16.png" alt="위시리스트"></button>
               </div>
             </div>
             <div class="swiper-slide pur_slide7">
@@ -711,7 +780,7 @@
                 <em>11,520원</em>
                 <span>12,800원</span>
                 <em class="sale_rate">10%</em>
-                <button type="button" class="like"><img src="./images/like.png" alt="위시리스트"></button>
+                <button type="button" class="like"><img src="./images/like_16.png" alt="위시리스트"></button>
               </div>
             </div>
           </div>
@@ -732,7 +801,7 @@
                 <em>53,820원</em>
                 <span>59,800원</span>
                 <em class="sale_rate">10%</em>
-                <button type="button" class="like"><img src="./images/like.png" alt="위시리스트"></button>
+                <button type="button" class="like"><img src="./images/like_16.png" alt="위시리스트"></button>
               </div>
             </div>
             <div class="swiper-slide sim_slide2">
@@ -742,7 +811,7 @@
                 <em>26,820원</em>
                 <span>29,800원</span>
                 <em class="sale_rate">10%</em>
-                <button type="button" class="like"><img src="./images/like.png" alt="위시리스트"></button>
+                <button type="button" class="like"><img src="./images/like_16.png" alt="위시리스트"></button>
               </div>
             </div>
             <div class="swiper-slide sim_slide3">
@@ -752,7 +821,7 @@
                 <em>11,520원</em>
                 <span>12,800원</span>
                 <em class="sale_rate">10%</em>
-                <button type="button" class="like"><img src="./images/like.png" alt="위시리스트"></button>
+                <button type="button" class="like"><img src="./images/like_16.png" alt="위시리스트"></button>
               </div>
             </div>
             <div class="swiper-slide sim_slide4">
@@ -762,7 +831,7 @@
                 <em>34,100원</em>
                 <span>69,800원</span>
                 <em class="sale_rate">10%</em>
-                <button type="button" class="like"><img src="./images/like.png" alt="위시리스트"></button>
+                <button type="button" class="like"><img src="./images/like_16.png" alt="위시리스트"></button>
               </div>
             </div>
             <div class="swiper-slide sim_slide5">
@@ -772,7 +841,7 @@
                 <em>53,820원</em>
                 <span>59,800원</span>
                 <em class="sale_rate">10%</em>
-                <button type="button" class="like"><img src="./images/like.png" alt="위시리스트"></button>
+                <button type="button" class="like"><img src="./images/like_16.png" alt="위시리스트"></button>
               </div>
             </div>
             <div class="swiper-slide sim_slide6">
@@ -782,7 +851,7 @@
                 <em>26,820원</em>
                 <span>29,800원</span>
                 <em class="sale_rate">10%</em>
-                <button type="button" class="like"><img src="./images/like.png" alt="위시리스트"></button>
+                <button type="button" class="like"><img src="./images/like_16.png" alt="위시리스트"></button>
               </div>
             </div>
             <div class="swiper-slide sim_slide7">
@@ -792,7 +861,7 @@
                 <em>11,520원</em>
                 <span>12,800원</span>
                 <em class="sale_rate">10%</em>
-                <button type="button" class="like"><img src="./images/like.png" alt="위시리스트"></button>
+                <button type="button" class="like"><img src="./images/like_16.png" alt="위시리스트"></button>
               </div>
             </div>
           </div>

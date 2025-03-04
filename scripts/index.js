@@ -1,12 +1,17 @@
 // ------------------------------------------------------------ 변수
+const hdBg = document.querySelector('.hd_bg');
 const mainSlide = document.querySelectorAll('.main_bnr .swiper-slide');
 const mainSlideTotal = document.querySelector('.main_bnr .slide_total');
 const mainSlideCurrent = document.querySelector('.main_bnr .slide_current');
 const mainBar = document.querySelector('.main_bnr .progress_bar');
-const gSlideCurrent = document.querySelector('.gmotion_container .slide_current');
+const container = document.querySelectorAll('.container');
+const like = document.querySelectorAll('main .like img')
 const bestCate = document.querySelectorAll('.best_container .category li a');
 const newCate = document.querySelectorAll('.new_container .category li a');
 const gCate = document.querySelectorAll('.gmotion_container .category li a');
+const gSlideCurrent = document.querySelector('.gmotion_container .slide_current');
+
+let boolean = false;
 
 mainSlideTotal.textContent = mainSlide.length;
 
@@ -22,6 +27,24 @@ function newReset(){
 function gReset(){
   for(let i of gCate) i.classList.remove('active');
 };
+
+// ------------------------------------------------------------ 전체 공통
+// ------------------------------------------------------------ 오류 ★★★
+for(let i of like){
+  i.addEventListener('click',(e)=>{
+    e.preventDefault();
+    boolean = !boolean;
+    if(boolean) i.src = './images/like_on_16.png';
+    else i.src = './images/like_16.png';
+  });
+};
+
+// ------------------------------------------------------------ 헤더
+window.addEventListener('scroll', function(){
+  if(this.window.scrollY > container[0].offsetTop-200) {
+    hdBg.style.backgroundColor = '#fff'
+  } else hdBg.style.backgroundColor = '';
+});
 
 // ------------------------------------------------------------ main bnr
 const mainSwiper = new Swiper('.main_swiper',{
@@ -50,8 +73,28 @@ const bestSwiper = new Swiper('.best_swiper1',{
     nextEl:'.best_slide_btn .next',
     prevEl:'.best_slide_btn .prev',
   },
-  slidesPerView:5,
-  spaceBetween:25,
+  breakpoints:{ /* 반응형 */
+    1600:{/* 1600 이상 사이 너비 25px*/
+      spaceBetween:25,
+      slidesPerView:5,
+    },
+    1200:{/* 1200 ~ 1599 사이 */
+      spaceBetween:10,
+      slidesPerView:5,
+    },
+    1000:{/* 1000 ~ 1199 사이 */
+      spaceBetween:10,
+      slidesPerView:4,
+    },
+    600:{/* 600 ~ 999 사이 */
+      spaceBetween:10,
+      slidesPerView:3,
+    },
+    0:{/* 0 ~ 599 */
+      spaceBetween:10,
+      slidesPerView:2,
+    },
+  }
 });
 
 for(let i of bestCate){
@@ -69,8 +112,28 @@ const newSwiper = new Swiper('.new_swiper1',{
     nextEl:'.new_slide_btn .next',
     prevEl:'.new_slide_btn .prev',
   },
-  slidesPerView:5,
-  spaceBetween:25,
+  breakpoints:{ /* 반응형 */
+    1600:{/* 1600 이상 사이 너비 25px*/
+      spaceBetween:25,
+      slidesPerView:5,
+    },
+    1200:{/* 1200 ~ 1599 사이 */
+      spaceBetween:10,
+      slidesPerView:5,
+    },
+    1000:{/* 1000 ~ 1199 사이 */
+      spaceBetween:10,
+      slidesPerView:4,
+    },
+    600:{/* 600 ~ 999 사이 */
+      spaceBetween:10,
+      slidesPerView:3,
+    },
+    0:{/* 0 ~ 599 */
+      spaceBetween:10,
+      slidesPerView:2,
+    },
+  }
 });
 
 for(let i of newCate){
@@ -102,13 +165,34 @@ const gSwiper = new Swiper('.g_swiper',{
     nextEl:'.gmotion_container .next',
     prevEl:'.gmotion_container .prev',
   },
-  slidesPerView:4,
-  slidesPerGroup:4,
-  spaceBetween:(160 / 3),
   pagination: {
     el: '.gmotion_container .progress_bar',
     type: 'progressbar',
   },
+  breakpoints:{ /* 반응형 */
+    1600:{/* 1600 이상 사이 너비 50px */
+      spaceBetween:50,
+      slidesPerView:4,
+      slidesPerGroup:4,
+    },
+    1200:{/* 1200 ~ 1599 사이 너비 18px */
+      spaceBetween:18,
+      slidesPerView:4,
+      slidesPerGroup:4,
+    },
+    1000:{/* 1000 ~ 1199 사이 */
+      spaceBetween:18,
+      slidesPerView:3,
+    },
+    600:{/* 600 ~ 999 사이 */
+      spaceBetween:18,
+      slidesPerView:2,
+    },
+    0:{/* 0 ~ 599 */
+      spaceBetween:0,
+      slidesPerView:1,
+    },
+  }
 });
 
 for(let i of gCate){
@@ -122,9 +206,15 @@ for(let i of gCate){
 // ------------------------------------------------------------ magazine
 const mgzSwiper = new Swiper('.mgz_swiper',{
   loop:true,
-  // centeredSlides:true,
   navigation:{
     nextEl:'.mgz_slide_btn .next',
     prevEl:'.mgz_slide_btn .prev',
   },
+  breakpoints:{ /* 반응형 */
+    1200:{/* 1200 이상 */
+      slidesPerView:1.5,
+      centeredSlides:true,
+    }, 
+    0:{slidesPerView:1,}, /* 0 ~ 1199 사이 */
+  }
 });

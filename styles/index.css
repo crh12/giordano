@@ -2,11 +2,11 @@ header .hd_bg {background-color: transparent;}
 header .hd_bg:hover {background-color: #fff;}
 /* -------------------------------------------------------------------------------------------- 메인 */
 main {}
-main .main_bnr {position: relative; width: 100%; transform:translateY(-80px); margin-bottom: 70px;}
+main .main_bnr {position: relative; width: 100%; transform:translateY(-80px); margin-bottom: 70px;} /* 사이 너백 150 - 헤더 높이 80 */
 /* -------------------------------------------------------------------------------------------- 메인 슬라이더 (공통) */
 main .main_bnr .main_swiper {width: 100%; height: calc(100vh - 32px);}
 main .main_bnr .main_swiper .swiper-wrapper {}
-main .main_bnr .main_swiper .swiper-wrapper .swiper-slide {padding: 80px;}
+main .main_bnr .main_swiper .swiper-wrapper .swiper-slide {}
 main .main_bnr .main_swiper .swiper-wrapper .swiper-slide .bnr_txt {}
 /* -------------------------------------------------------------------------------------------- 메인 슬라이더 (개별) */
 main .main_bnr .main_swiper .swiper-wrapper .slide1 {
@@ -41,7 +41,7 @@ main .main_bnr .swiper_progress .progress_btn span {letter-spacing: -0.02em; mar
 main .main_bnr .swiper_progress .progress_btn .slide_current {margin-right: 4px;}
 main .main_bnr .swiper_progress .progress_btn .slide_total {margin-left: 3px;}
 /* -------------------------------------------------------------------------------------------- container 공통 */
-main .container {width: 1600px; margin: 0 auto 120px;}
+main .container {max-width: 1600px; width: 100%;; margin: 0 auto 120px;}
 main .container .title {font-size: 2.19rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 30px;}
 main .container .category {width: 100%; margin-bottom: 30px; display: flex; position: relative;}
 main .container .category li {margin-right: 20px;}
@@ -64,11 +64,13 @@ main .container .item_wrap .best_new_swiper .swiper-wrapper .swiper-slide .best_
   padding: 3px 5px 5px; position: absolute; left: 0; top: 0;
   background-color: #1A1A1A; color: #fff; font-weight: 500; letter-spacing: -0.02em;
 }
-main .container .item_wrap .best_new_swiper .swiper-wrapper .swiper-slide .item_slide_img {width: 100%; height: 400px; margin-bottom: 12px;}
-main .container .item_wrap .best_new_swiper .swiper-wrapper .swiper-slide .item_slide_img a {width: 100%; display: block;}
+main .container .item_wrap .best_new_swiper .swiper-wrapper .swiper-slide .item_slide_img {width: 100%; height: max-content; margin-bottom: 12px;}
+main .container .item_wrap .best_new_swiper .swiper-wrapper .swiper-slide .item_slide_img a {width: 100%; height: max-content; display: block;}
 main .container .item_wrap .best_new_swiper .swiper-wrapper .swiper-slide .item_slide_img a img {width: 100%;}
 main .container .item_wrap .best_new_swiper .swiper-wrapper .swiper-slide .item_name {margin-bottom: 12px;}
-main .container .item_wrap .best_new_swiper .swiper-wrapper .swiper-slide .item_name a {display: inline-block; letter-spacing: -0.02em;}
+main .container .item_wrap .best_new_swiper .swiper-wrapper .swiper-slide .item_name a {
+  display: inline-block; width: 100%; letter-spacing: -0.02em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
 main .container .item_wrap .best_new_swiper .swiper-wrapper .swiper-slide .item_price_like {display: flex;  position: relative;}
 main .container .item_wrap .best_new_swiper .swiper-wrapper .swiper-slide .item_price_like em {font-weight: 500; letter-spacing: -0.02em; margin-right: 12px;}
 main .container .item_wrap .best_new_swiper .swiper-wrapper .swiper-slide .item_price_like span {color: #999; text-decoration: line-through; letter-spacing: -0.02em; margin-right: 12px;}
@@ -98,8 +100,10 @@ main .md_container .md_contents_wrap {display: flex; justify-content: space-betw
 /* -------------------------------------------------------------------------------------------- MD (왼) 슬라이더 */
 main .md_container .md_contents_wrap .md_swiper {width: 980px; height: 690px; margin-right: 10px;}
 main .md_container .md_contents_wrap .md_swiper .swiper-wrapper {}
-main .md_container .md_contents_wrap .md_swiper .swiper-wrapper .swiper-slide {}
-main .md_container .md_contents_wrap .md_swiper .swiper-wrapper .swiper-slide .txt {margin-top: 468px; width: 100%; text-align: center;}
+main .md_container .md_contents_wrap .md_swiper .swiper-wrapper .swiper-slide {
+  background-size: cover; background-position: center;
+}
+main .md_container .md_contents_wrap .md_swiper .swiper-wrapper .swiper-slide .txt {position: absolute; left: 0; bottom: 96px; width: 100%; text-align: center;}
 main .md_container .md_contents_wrap .md_swiper .swiper-wrapper .swiper-slide .txt h3 {margin-bottom: 20px; color: #fff; font-size: 2rem; font-weight: 500; letter-spacing: -0.02em; line-height: 1.4;}
 main .md_container .md_contents_wrap .md_swiper .swiper-wrapper .swiper-slide .txt p {color: #fff; letter-spacing: -0.02em;}
 main .md_container .md_contents_wrap .md_swiper .swiper-wrapper .md_slide1 {
@@ -116,23 +120,25 @@ main .md_container .md_contents_wrap .md_swiper .swiper-pagination-bullet {width
 main .md_container .md_contents_wrap .md_swiper .swiper-pagination-bullet-active {background-color: #CA9155;}
 main .md_container .md_contents_wrap .md_swiper .md_slide_btn {opacity: 0;}
 main .md_container .md_contents_wrap .md_swiper:hover .md_slide_btn {opacity: 1;}
-main .md_container .md_contents_wrap .md_swiper .md_slide_btn button {position: absolute; left: 0; top: 315px; z-index: 10; width: 40px;}
+main .md_container .md_contents_wrap .md_swiper .md_slide_btn button {position: absolute; left: 0; top: calc(50% - 30px); z-index: 10; width: 40px;}
 main .md_container .md_contents_wrap .md_swiper .md_slide_btn button img {width: 100%;}
 main .md_container .md_contents_wrap .md_swiper .md_slide_btn .prev {}
 main .md_container .md_contents_wrap .md_swiper .md_slide_btn .next {transform: scaleX(-1); left: auto; right: 0;}
 /* -------------------------------------------------------------------------------------------- MD (오) 상품리스트 */
 main .md_container .md_contents_wrap .md_item_list {width: 610px; display: flex; flex-flow: row wrap; justify-content: space-between;}
-main .md_container .md_contents_wrap .md_item_list li {width: 300px; height: 340px;}
+main .md_container .md_contents_wrap .md_item_list li {width: calc((100% - 10px) / 2); height: calc((100% - 10px) / 2);}
 main .md_container .md_contents_wrap .md_item_list li:first-child {margin-bottom: 10px;}
-main .md_container .md_contents_wrap .md_item_list li a {display: block; width: 100%; height: 100%; position: relative;}
+main .md_container .md_contents_wrap .md_item_list li a {
+  display: block; width: 100%; height: 100%; position: relative;
+  background-size: cover; background-position: center;
+}
 main .md_container .md_contents_wrap .md_item_list li a:hover::before,
-main .md_container .md_contents_wrap .md_item_list li a:hover .item_info {display: block;}
+main .md_container .md_contents_wrap .md_item_list li a:hover .item_info {display: flex;}
 main .md_container .md_contents_wrap .md_item_list li a::before {
-  display: none; content: ''; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5);
+  display: none; content: ''; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); position: absolute;
 }
 main .md_container .md_contents_wrap .md_item_list li:nth-child(1) a {
   background-image: url(../images/md_item_001.jpg);
-  background-size: cover; background-position: top;
 }
 main .md_container .md_contents_wrap .md_item_list li:nth-child(2) a {
   background-image: url(../images/md_item_002.jpg);
@@ -143,12 +149,12 @@ main .md_container .md_contents_wrap .md_item_list li:nth-child(3) a {
 main .md_container .md_contents_wrap .md_item_list li:nth-child(4) a {
   background-image: url(../images/md_item_004.jpg);
 }
-main .md_container .md_contents_wrap .md_item_list li a .item_info {display: none; width: 100%; padding: 0 30px 30px; position: absolute; left: 0; bottom: 0;}
-main .md_container .md_contents_wrap .md_item_list li a .item_info .item_name {color: #fff; margin-bottom: 10px;}
-main .md_container .md_contents_wrap .md_item_list li a .item_info em {color: #fff;}
-main .md_container .md_contents_wrap .md_item_list li a .item_info span {color: #999; text-decoration: line-through; margin: 0 10px;}
+main .md_container .md_contents_wrap .md_item_list li a .item_info {display: none; flex-flow: row wrap; width: 100%; padding: 0 30px 30px; position: absolute; left: 0; bottom: 0;}
+main .md_container .md_contents_wrap .md_item_list li a .item_info .item_name {width: 100%; color: #fff; margin-bottom: 10px; letter-spacing: -0.02em;}
+main .md_container .md_contents_wrap .md_item_list li a .item_info em {color: #fff; font-weight: 500; letter-spacing: -0.02em;}
+main .md_container .md_contents_wrap .md_item_list li a .item_info span {color: #999; text-decoration: line-through; margin: 0 10px; letter-spacing: -0.02em;}
 main .md_container .md_contents_wrap .md_item_list li a .item_info .sale_rate {color: #CA9155;}
-main .md_container .md_contents_wrap .md_item_list li a .item_info button.like {width: 16px; float: right;}
+main .md_container .md_contents_wrap .md_item_list li a .item_info button.like {width: 16px; height: 16px; position: absolute; right: 30px; bottom: 30px;}
 main .md_container .md_contents_wrap .md_item_list li a .item_info button.like img {width: 100%;}
 /* -------------------------------------------------------------------------------------------- G-MOTION */
 main .gmotion_container {}
@@ -169,7 +175,7 @@ main .gmotion_container .g_swiper .swiper-wrapper .g_slide2 {}
 main .gmotion_container .g_swiper .swiper-wrapper .g_slide3 {}
 main .gmotion_container .g_swiper .swiper-wrapper .g_slide4 {}
 main .gmotion_container .g_swiper .swiper-wrapper .g_slide5 {}
-main .gmotion_container .g_swiper .swiper-wrapper .swiper-slide p.main_img {width: 360px; height: 450px; margin-bottom: 12px;}
+main .gmotion_container .g_swiper .swiper-wrapper .swiper-slide p.main_img {width: 100%; height: max-content; margin-bottom: 12px;}
 main .gmotion_container .g_swiper .swiper-wrapper .swiper-slide p.main_img img {width: 100%;}
 main .gmotion_container .g_swiper .swiper-wrapper .swiper-slide .g_item_list {}
 main .gmotion_container .g_swiper .swiper-wrapper .swiper-slide .g_item_list li {
@@ -197,11 +203,11 @@ main .gmotion_container .swiper_progress .progress_btn .prev {}
 main .gmotion_container .swiper_progress .progress_btn .next {transform: scaleX(-1);}
 main .gmotion_container .swiper_progress .progress_btn .slide_current {}
 /* -------------------------------------------------------------------------------------------- MAGAZINE */
-main .magazine_container {}
-main .magazine_container .title {}
+main .magazine_container {width: 100%}
+main .magazine_container .title {width: 100%; max-width: 1600px; margin: 0 auto 30px;}
 main .magazine_container .swiper_btn_wrap {position: relative;}
 /* -------------------------------------------------------------------------------------------- MAGAZINE 슬라이더 */
-main .magazine_container .swiper_btn_wrap .mgz_swiper {width: 1200px; height: 500px; overflow: unset; margin: 0 auto;}
+main .magazine_container .swiper_btn_wrap .mgz_swiper {width: 100%; height: 500px; margin: 0 auto;}
 main .magazine_container .swiper_btn_wrap .mgz_swiper .swiper-wrapper {}
 main .magazine_container .swiper_btn_wrap .mgz_swiper .swiper-wrapper .swiper-slide {
   background-size: cover; background-position: center;
@@ -218,12 +224,12 @@ main .magazine_container .swiper_btn_wrap .mgz_swiper .swiper-wrapper .mgz_slide
 main .magazine_container .swiper_btn_wrap .mgz_swiper .swiper-wrapper .swiper-slide .txt {position: absolute; left: 50%; transform: translateX(-50%); bottom: 50px;}
 main .magazine_container .swiper_btn_wrap .mgz_swiper .swiper-wrapper .swiper-slide .txt > * {color: #fff; text-align: center;}
 main .magazine_container .swiper_btn_wrap .mgz_swiper .swiper-wrapper .swiper-slide .txt h3 {margin-bottom: 20px; font-size: 2rem; font-weight: 500; letter-spacing: -0.02em;}
-main .magazine_container .swiper_btn_wrap .mgz_swiper .swiper-wrapper .swiper-slide .txt p {font-size: 1.06rem; letter-spacing: -0.02em;}
-main .magazine_container .swiper_btn_wrap .mgz_slide_btn {width: 100%; max-width: 1600px; position: absolute; left: 50%; transform: translate(-50%); top: 50%; z-index: 10;}
-main .magazine_container .swiper_btn_wrap .mgz_slide_btn button {opacity: 0;}
+main .magazine_container .swiper_btn_wrap .mgz_swiper .swiper-wrapper .swiper-slide .txt p {font-size: 1.06rem; letter-spacing: -0.02em; text-wrap: nowrap;}
+main .magazine_container .swiper_btn_wrap .mgz_slide_btn {}
+main .magazine_container .swiper_btn_wrap .mgz_slide_btn button {opacity: 0; position: absolute; left: 0; top: calc(50% - 30px); z-index: 10;}
 main .magazine_container .swiper_btn_wrap:hover .mgz_slide_btn button {opacity: 1;}
 main .magazine_container .swiper_btn_wrap .mgz_slide_btn .prev {}
-main .magazine_container .swiper_btn_wrap .mgz_slide_btn .next {float: right; transform: scaleX(-1);}
+main .magazine_container .swiper_btn_wrap .mgz_slide_btn .next {transform: scaleX(-1); left: auto; right: 0;}
 /* -------------------------------------------------------------------------------------------- INSTAGRAM */
 main .instragram_container {width: 100%; margin-bottom: 150px;}
 main .instragram_container .title {text-align: center; margin-bottom: 10px;}

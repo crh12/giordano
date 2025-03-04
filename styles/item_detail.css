@@ -4,9 +4,9 @@ header .hd_bg nav .gnb > li > .lnb {border-top: 0;}
 /* ----------------------------------------------------------------------------- 메인시작 */
 main {max-width: 1600px; margin: 0 auto;}
 /* ----------------------------------------------------------------------------- path */
-main .path {display: flex; align-items: center; width: 100%; padding: 20px 0;}
+main .path {display: flex; align-items: center; width: 100%; padding: 20px 80px;}
 main .path a {color: #999; font-size: 0.75rem; font-weight: 500; letter-spacing: -0.02em;}
-main .path span {width: 12px; margin: 0 10px;}
+main .path span {width: 12px; height: 12px; margin: 0 10px;}
 main .path span img {width: 100%;}
 /* ----------------------------------------------------------------------------- 상품 시작 */
 main .product {display: flex; justify-content: space-between; flex-flow: row wrap;}
@@ -33,13 +33,19 @@ main .info_container .name_share_contents .p_name {font-size: 1.75rem; letter-sp
 main .info_container .name_share_contents .like_share_wrap {position: relative; display: flex;}
 main .info_container .name_share_contents .like_share_wrap > a {width: 24px; height: 24px;}
 main .info_container .name_share_contents .like_share_wrap > a img {width: 100%;}
-main .info_container .name_share_contents .like_share_wrap .like {margin-right: 12px;}
-main .info_container .name_share_contents .like_share_wrap .like img {}
-main .info_container .name_share_contents .like_share_wrap .like_on img {}
+main .info_container .name_share_contents .like_share_wrap .like24 {margin-right: 12px;}
+main .info_container .name_share_contents .like_share_wrap .like24 img {}
 main .info_container .name_share_contents .like_share_wrap .share {}
 main .info_container .name_share_contents .like_share_wrap .share img {}
 main .info_container .name_share_contents .like_share_wrap .share_open {display: flex; flex-flow: column nowrap; position: absolute; right: 0; top: 0; background-color: #fff;}
-main .info_container .name_share_contents .like_share_wrap .share_open a {width: 24px; margin-bottom: 12px;}
+main .info_container .name_share_contents .like_share_wrap .share_open a {
+  width: 24px; height: 24px; margin-bottom: 12px;
+  background-size: cover; background-position: center;
+}
+main .info_container .name_share_contents .like_share_wrap .share_open .share_kakao {background-image: url(../images/share_kakao.png);}
+main .info_container .name_share_contents .like_share_wrap .share_open .share_kakao:hover {background-image: url(../images/share_kakao_on.png);}
+main .info_container .name_share_contents .like_share_wrap .share_open .share_url {background-image: url(../images/share_url.png);}
+main .info_container .name_share_contents .like_share_wrap .share_open .share_url:hover {background-image: url(../images/share_url_on.png);}
 main .info_container .name_share_contents .like_share_wrap .share_open a:last-child {margin: 0;}
 main .info_container .name_share_contents .like_share_wrap .share_open a img {width: 100%;}
 /* ----------------------------------------------------------------------------- 가격 */
@@ -79,12 +85,15 @@ main .info_container .detail_contents .benefits dd a {display: flex; align-items
 main .info_container .detail_contents .benefits dd a:last-child {margin: 0;}
 main .info_container .detail_contents .benefits dd a img {width: 12px; margin-left: 4px;}
 /* ----------------------------------------------------------------------------- 기타정보-배송비 */
-main .info_container .detail_contents .delivery_charge {}
+main .info_container .detail_contents .delivery_charge {position: relative;}
 main .info_container .detail_contents .delivery_charge dt {}
-main .info_container .detail_contents .delivery_charge dt a {width: 12px; margin-left: 4px;}
+main .info_container .detail_contents .delivery_charge dt a {width: 12px; margin-left: 4px; position: relative; top: 1px;}
 main .info_container .detail_contents .delivery_charge dt a img {width: 100%;}
 /* ----------------------------------------------------------------------------- 배송비 팝업 */
-main .info_container .detail_contents .delivery_charge .d_charge_open {display: none;}
+main .info_container .detail_contents .delivery_charge .d_charge_open {
+  display: none;
+  position: absolute; left: 0; top: calc(100% + 12px);
+}
 main .info_container .detail_contents .delivery_charge .d_charge_open p {}
 main .info_container .detail_contents .delivery_charge .d_charge_open p a {}
 main .info_container .detail_contents .delivery_charge .d_charge_open p a img {/* width: 100%; */}
@@ -100,8 +109,8 @@ main .info_container .detail_contents .color dd a {
   width: 28px; height: 28px; margin-right: 10px;
   overflow: hidden; border-radius: 50%;
 }
-main .info_container .detail_contents .color dd a.color_active {position: relative;}
-main .info_container .detail_contents .color dd a.color_active::after {
+main .info_container .detail_contents .color dd a.active {position: relative;}
+main .info_container .detail_contents .color dd a.active::after {
   content: ''; display: block; width: 100%; height: 100%; position: absolute; left: 0; top: 0;
   border-radius: 50%; transform: scale(0.85);
   background-image: url(../images/check_24.png); background-position: center; background-size: cover;
@@ -121,7 +130,7 @@ main .info_container .detail_contents .size dd a {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15); border-radius: 10px;
   font-size: 0.88rem; letter-spacing: -0.02em;
 }
-main .info_container .detail_contents .size dd a.size_active {
+main .info_container .detail_contents .size dd a.active {
   box-shadow: 0 0 0 2px #1A1A1A;
   font-size: 0.88rem; font-weight: 500; letter-spacing: -0.02em;
 }
@@ -161,7 +170,9 @@ main .info_container .order_btn #cart_btn {margin-right: 10px; color: #1A1A1A;}
 main .info_container .order_btn #buy_btn {color: #fff; background-color: #1A1A1A;}
 /* ----------------------------------------------------------------------------- 하단 공통 */
 main .container {width: 820px; margin-bottom: 100px;}
+main .container:last-child {margin-bottom: 150px;}
 main .container h3 {font-size: 1.06rem; font-weight: 500; letter-spacing: -0.02em; padding-bottom: 20px;}
+main .container .swiper .item_name a {white-space : nowrap; overflow : hidden; text-overflow : ellipsis; width: 100%;}
 /* ----------------------------------------------------------------------------- 코디 상품 */
 main .product .codi_container {}
 main .product .codi_container h3 {}
@@ -181,18 +192,28 @@ main .product .codi_container .codi_list li .item_price_like .like img {width: 1
 main .product .codi_container .codi_list .item1 {}
 main .product .codi_container .codi_list .item2 {}
 main .product .codi_container .codi_list .item3 {}
-/* ----------------------------------------------------------------------------- 상세정보 탭 */
-main .product .detail_container {}
-main .product .detail_container .d_title {
-  width: 100%; display: flex; justify-content: center;
-  border-top: 1px solid #000; border-bottom: 1px solid rgba(0, 0, 0, 0.15) ;
+/* ----------------------------------------------------------------------------- 하단 탭 */
+main .product .d_title {
+  width: 820px; display: flex; justify-content: center; position: sticky; top: 79px; z-index: 10;
+  background-color: #fff; border-top: 1px solid #000; border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
-main .product .detail_container .d_title li {width: 200px; padding: 20px 0; text-align: center; color: #999; font-size: 0.94rem; letter-spacing: -0.02em;}
-main .product .detail_container .d_title li.active {color: #000;}
+main .product .d_title li {}
+main .product .d_title li a {
+  display: inline-block; width: 200px; padding: 20px 0;
+  text-align: center; color: #999; font-size: 0.94rem; letter-spacing: -0.02em;
+}
+main .product .d_title li.active a {color: #000; font-weight: 500;}
+/* ----------------------------------------------------------------------------- 상세정보 */
 main .product .detail_container .d_content {width: 100%; height: 1000px; padding: 20px 0; overflow: hidden;}
 main .product .detail_container .d_content li {width: 700px; margin: 0 auto;}
 main .product .detail_container .d_content li img {width: 100%;}
-main .product .detail_container #d_more {width: 100%; font-size: 0.94rem; letter-spacing: -0.02em; padding: 16px 0; border: 1px solid #000; display: flex; justify-content: center;}
+main .product .detail_container .d_content li:nth-child(1) {}
+main .product .detail_container .d_content li:nth-child(2) {
+  background-image: url(../images/detail_info.jpg);
+  background-size: cover; background-position: center;
+}
+main .product .detail_container #d_more {width: 100%; padding: 16px 0; border: 1px solid #000; display: flex; justify-content: center;}
+main .product .detail_container #d_more span {font-size: 0.94rem; letter-spacing: -0.02em;}
 main .product .detail_container #d_more img {margin-left: 4px; width: 15px; height: 15px;}
 /* ----------------------------------------------------------------------------- 상품 리뷰 */
 main .product .review_container {}
@@ -234,7 +255,10 @@ main .product .review_container .photo_contents .review_photo li a img {width: 1
 /* ----------------------------------------------------------------------------- 리뷰란 */
 main .product .review_container .user_contents {width: 100%;}
 /* ----------------------------------------------------------------------------- 리뷰란(메뉴) */
-main .product .review_container .user_contents .r_menu {padding: 20px 0; border-bottom: 1px solid rgba(0, 0, 0, 0.15); display: flex; justify-content: space-between; align-items: center;}
+main .product .review_container .user_contents .r_menu {
+  padding: 20px 0; border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  display: flex; justify-content: space-between; align-items: center;
+}
 main .product .review_container .user_contents .r_menu .align {display: flex;}
 main .product .review_container .user_contents .r_menu .align a {margin-right: 24px; color: #999; letter-spacing: -0.02em;}
 main .product .review_container .user_contents .r_menu .align a.active {color: #000;}
@@ -242,17 +266,19 @@ main .product .review_container .user_contents .r_menu .align a:last-child {marg
 main .product .review_container .user_contents .r_menu .filter {display: flex;}
 main .product .review_container .user_contents .r_menu .filter li {margin-right: 24px; position: relative;}
 main .product .review_container .user_contents .r_menu .filter li:last-child {margin: 0;}
-main .product .review_container .user_contents .r_menu .filter li a {letter-spacing: -0.02em;}
+main .product .review_container .user_contents .r_menu .filter li a {display: inline-block; letter-spacing: -0.02em;}
 main .product .review_container .user_contents .r_menu .filter li a img {width: 12px; margin-left: 4px;}
+/* ----------------------------------------------------------------------------- 리뷰 필터 팝업 공통 */
 main .product .review_container .user_contents .r_menu .filter li div {
-  width: 200px; position: absolute; left: 0;
-  display: flex; flex-flow: column;
   background-color: lightblue;
+  border: 2px solid #1A1A1A;
+  width: 200px; position: absolute; left: 0; top: calc(100% + 10px); display: flex; flex-flow: column;
 }
 main .product .review_container .user_contents .r_menu .filter li div label {}
 main .product .review_container .user_contents .r_menu .filter li div label span {}
 main .product .review_container .user_contents .r_menu .filter li div label span img {}
 main .product .review_container .user_contents .r_menu .filter li div label input {}
+/* ----------------------------------------------------------------------------- 리뷰 필터 팝업 개별 */
 main .product .review_container .user_contents .r_menu .filter li .f_score {}
 main .product .review_container .user_contents .r_menu .r_search {width: 160px; padding: 8px 12px; border: 0.5px solid #999; border-radius: 10px;}
 main .product .review_container .user_contents .r_menu .r_search img {width: 12px; margin-right: 12px;}
