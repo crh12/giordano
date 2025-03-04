@@ -41,7 +41,7 @@ main .main_bnr .swiper_progress .progress_btn span {letter-spacing: -0.02em; mar
 main .main_bnr .swiper_progress .progress_btn .slide_current {margin-right: 4px;}
 main .main_bnr .swiper_progress .progress_btn .slide_total {margin-left: 3px;}
 /* -------------------------------------------------------------------------------------------- container 공통 */
-main .container {max-width: 1600px; width: 100%;; margin: 0 auto 120px;}
+main .container {max-width: 1760px; width: 100%; margin: 0 auto 120px; padding: 0 80px;}
 main .container .title {font-size: 2.19rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 30px;}
 main .container .category {width: 100%; margin-bottom: 30px; display: flex; position: relative;}
 main .container .category li {margin-right: 20px;}
@@ -79,7 +79,7 @@ main .container .item_wrap .best_new_swiper .swiper-wrapper .swiper-slide .item_
 main .container .item_wrap .best_new_swiper .swiper-wrapper .swiper-slide .item_price_like .like img {width: 100%;}
 /* -------------------------------------------------------------------------------------------- container 슬라이더 버튼 */
 main .container .item_wrap .item_slide_btn {}
-main .container .item_wrap .item_slide_btn button {position: absolute; left: 0; top: 172px; z-index: 10; width: 40px;}
+main .container .item_wrap .item_slide_btn button {position: absolute; left: 0; top: calc((100% - 56px) / 2 - 30px); z-index: 10; width: 40px;}
 main .container .item_wrap .item_slide_btn button img {width: 100%;}
 main .container .item_wrap .item_slide_btn .prev {}
 main .container .item_wrap .item_slide_btn .next {transform: scaleX(-1); left: auto; right: 0;}
@@ -90,7 +90,7 @@ main .best_container .item_wrap:hover .best_slide_btn {opacity: 1;}
 main .new_container .item_wrap .new_slide_btn {opacity: 0;}
 main .new_container .item_wrap:hover .new_slide_btn {opacity: 1;}
 /* -------------------------------------------------------------------------------------------- EVENT */
-main .event_container {width: 100%; max-width: 1600px; display: flex; flex-flow: row nowrap;}
+main .event_container {width: 100%; max-width: 1760px; display: flex; flex-flow: row nowrap;}
 main .event_container a {width: 100%;}
 main .event_container a img {width: 100%;}
 /* -------------------------------------------------------------------------------------------- MD's PICK */
@@ -98,7 +98,7 @@ main .md_container {}
 main .md_container .title {}
 main .md_container .md_contents_wrap {display: flex; justify-content: space-between;}
 /* -------------------------------------------------------------------------------------------- MD (왼) 슬라이더 */
-main .md_container .md_contents_wrap .md_swiper {width: 980px; height: 690px; margin-right: 10px;}
+main .md_container .md_contents_wrap .md_swiper {width: 61.25%; height: 690px; margin-right: 10px;}
 main .md_container .md_contents_wrap .md_swiper .swiper-wrapper {}
 main .md_container .md_contents_wrap .md_swiper .swiper-wrapper .swiper-slide {
   background-size: cover; background-position: center;
@@ -126,14 +126,15 @@ main .md_container .md_contents_wrap .md_swiper .md_slide_btn .prev {}
 main .md_container .md_contents_wrap .md_swiper .md_slide_btn .next {transform: scaleX(-1); left: auto; right: 0;}
 /* -------------------------------------------------------------------------------------------- MD (오) 상품리스트 */
 main .md_container .md_contents_wrap .md_item_list {width: 610px; display: flex; flex-flow: row wrap; justify-content: space-between;}
-main .md_container .md_contents_wrap .md_item_list li {width: calc((100% - 10px) / 2); height: calc((100% - 10px) / 2);}
+main .md_container .md_contents_wrap .md_item_list li {width: calc((100% - 10px) / 2); height: calc((100% - 10px) / 2); position: relative;}
 main .md_container .md_contents_wrap .md_item_list li:first-child {margin-bottom: 10px;}
 main .md_container .md_contents_wrap .md_item_list li a {
   display: block; width: 100%; height: 100%; position: relative;
   background-size: cover; background-position: center;
 }
-main .md_container .md_contents_wrap .md_item_list li a:hover::before,
-main .md_container .md_contents_wrap .md_item_list li a:hover .item_info {display: flex;}
+main .md_container .md_contents_wrap .md_item_list li:hover button.like,
+main .md_container .md_contents_wrap .md_item_list li:hover a::before,
+main .md_container .md_contents_wrap .md_item_list li:hover a .item_info {display: flex;}
 main .md_container .md_contents_wrap .md_item_list li a::before {
   display: none; content: ''; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); position: absolute;
 }
@@ -154,8 +155,8 @@ main .md_container .md_contents_wrap .md_item_list li a .item_info .item_name {w
 main .md_container .md_contents_wrap .md_item_list li a .item_info em {color: #fff; font-weight: 500; letter-spacing: -0.02em;}
 main .md_container .md_contents_wrap .md_item_list li a .item_info span {color: #999; text-decoration: line-through; margin: 0 10px; letter-spacing: -0.02em;}
 main .md_container .md_contents_wrap .md_item_list li a .item_info .sale_rate {color: #CA9155;}
-main .md_container .md_contents_wrap .md_item_list li a .item_info button.like {width: 16px; height: 16px; position: absolute; right: 30px; bottom: 30px;}
-main .md_container .md_contents_wrap .md_item_list li a .item_info button.like img {width: 100%;}
+main .md_container .md_contents_wrap .md_item_list li button.like {display: none; width: 16px; height: 16px; position: absolute; right: 30px; bottom: 30px;}
+main .md_container .md_contents_wrap .md_item_list li button.like img {width: 100%;}
 /* -------------------------------------------------------------------------------------------- G-MOTION */
 main .gmotion_container {}
 main .gmotion_container .title {}
@@ -193,10 +194,10 @@ main .gmotion_container .g_swiper .swiper-wrapper .swiper-slide .g_item_list li 
 main .gmotion_container .g_swiper .swiper-wrapper .swiper-slide .g_item_list li button.like {width: 16px;}
 main .gmotion_container .g_swiper .swiper-wrapper .swiper-slide .g_item_list li button.like img {width: 100%;}
 /* -------------------------------------------------------------------------------------------- G 슬라이더 프로그레스바 */
-main .gmotion_container .swiper_progress {max-width: 1600px; width: 100%; display: flex; justify-content: space-between; align-items: center;}
-main .gmotion_container .swiper_progress .progress_bar {max-width: 1500px; height: 2px; background-color: #ddd; position: relative;}
+main .gmotion_container .swiper_progress {max-width: 1760px; width: 100%; display: flex; justify-content: space-between; align-items: center;}
+main .gmotion_container .swiper_progress .progress_bar {width: 100%; height: 2px; background-color: #ddd; position: relative;}
 main .gmotion_container .swiper_progress .progress_bar .swiper-pagination-progressbar-fill {background-color: #1A1A1A;}
-main .gmotion_container .swiper_progress .progress_btn {}
+main .gmotion_container .swiper_progress .progress_btn {display: none;}
 main .gmotion_container .swiper_progress .progress_btn button {width: 20px;}
 main .gmotion_container .swiper_progress .progress_btn button img {width: 100%;}
 main .gmotion_container .swiper_progress .progress_btn .prev {}
@@ -204,7 +205,7 @@ main .gmotion_container .swiper_progress .progress_btn .next {transform: scaleX(
 main .gmotion_container .swiper_progress .progress_btn .slide_current {}
 /* -------------------------------------------------------------------------------------------- MAGAZINE */
 main .magazine_container {width: 100%}
-main .magazine_container .title {width: 100%; max-width: 1600px; margin: 0 auto 30px;}
+main .magazine_container .title {width: 100%; max-width: 1760px; margin: 0 auto 30px;}
 main .magazine_container .swiper_btn_wrap {position: relative;}
 /* -------------------------------------------------------------------------------------------- MAGAZINE 슬라이더 */
 main .magazine_container .swiper_btn_wrap .mgz_swiper {width: 100%; height: 500px; margin: 0 auto;}
