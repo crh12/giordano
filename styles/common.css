@@ -1,3 +1,4 @@
+body {min-width: 430px;}
 /* ------------------------------------------------------ 헤더(브랜드) */
 .hd_brands {
   width: 100%; height: 32px; background-color: #1A1A1A;
@@ -11,14 +12,14 @@
 .hd_brands li:nth-child(2) a img {padding-top: 11.5px;}
 .hd_brands li:nth-child(3) a img {padding-top: 9px;}
 /* ------------------------------------------------------ 헤더 */
-header {position: sticky; left: 0; top: 0; z-index: 999; width: 100%;}
+header {position: sticky; left: 0; top: 0; z-index: 998; width: 100%;}
 header .hd_bg {
   width: 100%; height: 80px; padding: 0 80px; background-color: #fff;
   display: flex; justify-content: space-between; align-items: center; transition: background-color 0.3s;
 }
 header .hd_bg h1 {}
 header .hd_bg h1 a {}
-header .hd_bg h1 a img {}
+header .hd_bg h1 a img {width: 100%;}
 /* ------------------------------------------------------ 중앙 gnb */
 header .hd_bg nav {}
 header .hd_bg nav .gnb {
@@ -47,9 +48,7 @@ header .hd_bg nav .gnb > li > .lnb {
 header .hd_bg nav .gnb > li > .lnb li {margin-right: 80px;}
 header .hd_bg nav .gnb > li > .lnb li:last-child {margin: 0;}
 header .hd_bg nav .gnb > li > .lnb li a {margin-bottom: 16px; letter-spacing: -0.02em; position: relative;}
-header .hd_bg nav .gnb > li > .lnb li a::after {content: ''; display: block; width: 100%; height: 1.5px; background-color: #000;
-  position: absolute; left: 0; top: calc(100% + 2px); opacity: 0;}
-header .hd_bg nav .gnb > li > .lnb li a:hover::after {opacity: 1;}
+header .hd_bg nav .gnb > li > .lnb li a:hover {text-decoration: underline; text-underline-offset: 4px;}
 header .hd_bg nav .gnb > li > .lnb li a:first-child {margin-bottom: 20px;}
 /* ------------------------------------------------------ lnb 메뉴 개별 */
 header .hd_bg nav .gnb > li:last-child > .lnb {/* magazine */flex-flow: column nowrap; align-items: center;}
@@ -91,7 +90,15 @@ footer .ft_top {
 footer .ft_top .ft_logo {width: 191px;}
 footer .ft_top .ft_logo img {width: 100%;}
 footer .ft_top .ft_sns {}
-footer .ft_top .ft_sns a {display: inline-block; width: 24px; margin-right: 20px;}
+footer .ft_top .ft_sns a {display: inline-block; width: 24px; margin-right: 20px; position: relative;}
+footer .ft_top .ft_sns a::before {
+  content: ''; display: block; width: 100%; height: 100%; position: absolute; left: 0; top: 0;
+  background-position: center; background-size: cover;
+}
+footer .ft_top .ft_sns a:nth-of-type(1):hover::before {background-image: url(../images/sns_talk_on.png);}
+footer .ft_top .ft_sns a:nth-of-type(2):hover::before {background-image: url(../images/sns_insta_on.png);}
+footer .ft_top .ft_sns a:nth-of-type(3):hover::before {background-image: url(../images/sns_youtube_on.png);}
+footer .ft_top .ft_sns a:nth-of-type(4):hover::before {background-image: url(../images/sns_facebook_on.png);}
 footer .ft_top .ft_sns a:last-child {margin: 0;}
 footer .ft_top .ft_sns a img {width: 100%;}
 footer .ft_btm {display: flex; justify-content: space-between;}

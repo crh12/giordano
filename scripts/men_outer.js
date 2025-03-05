@@ -1,21 +1,50 @@
 // ------------------------------------------------------------ 변수
-const menuList = document.querySelectorAll('.title_menu_container .menu a');
-const alignList = document.querySelectorAll('.align_list a');
-const layoutList = document.querySelectorAll('.align_contents .layout a');
+const menuLi = document.querySelectorAll('.title_menu_container .menu > li > a'); /* 메뉴 - 대분류 */
+const subMenu = document.querySelectorAll('.title_menu_container .sub_menu'); /* 메뉴 - 소분류 그룹 */
+const subLi = document.querySelectorAll('.title_menu_container .sub_menu a'); /* 메뉴 - 소분류 */
+
+const mMenuLi = document.querySelectorAll('.m_menu > li > a'); /* 모바일 메뉴 - 대분류 */
+const mSubLi = document.querySelectorAll('.m_menu .sub_menu a'); /* 모바일 메뉴 - 소분류 */
+const mSubMenu = document.querySelectorAll('.m_menu .sub_menu'); /* 모바일 메뉴 - 소분류 그룹 */
+
+
+const alignList = document.querySelectorAll('.align_list a'); /* 정렬방식 */
+const filter = document.querySelector('.align_contents .filter'); /* 필터 */
+const layoutList = document.querySelectorAll('.align_contents .layout a'); /* 레이아웃 방식 */
 const pageList = document.querySelectorAll('.page_container .page_num');
 const pagePrev = document.querySelector('.page_container .page_prev');
 const pageNext = document.querySelector('.page_container .page_next');
-const pageNow = document.getElementsByClassName('.page_num.active');/* ★★ */
-const like = document.querySelectorAll('main .like img')
+const like = document.querySelectorAll('main .like img');
+let fillterBlean = false;
 let boolean = false;
-
-console.log(pageNow);
-
-// ------------------------------------------------------------ 초기세팅
 
 // ------------------------------------------------------------ 함수 생성
 function menuReset(){
-    for(let i of menuList){i.classList.remove('active')}
+    for(let i of menuLi){i.classList.remove('active')}
+};
+
+function subReset(){
+    for(let i of subLi){i.classList.remove('active')}
+};
+
+function subHide(){
+    for(let i of subMenu){
+        i.style.display = 'none';
+    };
+};
+
+function mMenuReset(){
+    for(let i of mMenuLi){i.classList.remove('active')}
+};
+
+function mSubReset(){
+    for(let i of mSubLi){i.classList.remove('active')}
+};
+
+function mSubHide(){
+    for(let i of mSubMenu){
+        i.style.display = 'none';
+    };
 };
 
 function alignReset(){
@@ -30,16 +59,52 @@ function pageReset(){
     for(let i of pageList){i.classList.remove('active')}
 };
 
-function pageNextBtn(pageNow){ /* ★★ */
-    pageReset();
-    pageList[pageNow++].classList.add('active');
-};
 
+// ------------------------------------------------------------ 초기세팅
+
+subHide();
+mSubHide();
+subMenu[0].style.display = 'block';
+mSubMenu[0].style.display = 'flex';
 
 // ------------------------------------------------------------ 메뉴
-for(let i of menuList){
-    i.addEventListener('click', ()=>{
+for(let i of menuLi){
+    i.addEventListener('click', (e)=>{
+        e.preventDefault();
         menuReset();
+        subReset();
+        subHide();
+        i.classList.add('active');
+        i.nextElementSibling.style.display = 'block';
+    })
+};
+
+for(let i of subLi){
+    i.addEventListener('click', (e)=>{
+        e.preventDefault();
+        menuReset();
+        subReset();
+        i.classList.add('active');
+    })
+};
+
+// ------------------------------------------------------------ 모바일 메뉴
+for(let i of mMenuLi){
+    i.addEventListener('click', (e)=>{
+        e.preventDefault();
+        mMenuReset();
+        mSubReset();
+        mSubHide();
+        i.classList.add('active');
+        i.nextElementSibling.style.display = 'flex';
+    })
+};
+
+console.log(mSubLi)
+for(let i of mSubLi){
+    i.addEventListener('click', (e)=>{
+        e.preventDefault();
+        mSubReset();
         i.classList.add('active');
     })
 };
@@ -53,6 +118,13 @@ for(let i of alignList){
         i.classList.add('active');
     })
 };
+
+filter.addEventListener('click', (e)=>{
+    e.preventDefault();
+    fillterBlean = !fillterBlean;
+    if(fillterBlean) filter.style.backgroundImage = 'url(./images/filter_15_on.png)';
+    else filter.style.backgroundImage = 'url(./images/filter_15.png)';
+});
 
 layoutList[0].addEventListener('click', ()=>{
     if (layoutList[0].className != 'active') {
@@ -91,8 +163,3 @@ for(let i of pageList){
         i.classList.add('active');
     })
 };
-
-// pageNext.addEventListener('click', (e)=>{
-//     e.preventDefault();
-//     if (pageNow < 4) pageNextBtn(pageNow);
-// });

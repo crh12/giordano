@@ -392,3 +392,22 @@ main .product .similar_container .sim_swiper .slide_btn button {}
 main .product .similar_container .sim_swiper .slide_btn button img {}
 main .product .similar_container .sim_swiper .slide_btn .prev {}
 main .product .similar_container .sim_swiper .slide_btn .next {}
+/* ----------------------------------------------------------------------------- 비슷한 상품 */
+.cart_open_bg {
+  background-color: rgba(0, 0, 0, 0.5); z-index: 999;
+  position: fixed; left: 0; top: 0; width: 100%; height: 100vh; padding: 250px;
+}
+.cart_open_bg .cart_container {
+  width: 600px; background-color: #fff; margin: 0 auto; padding: 60px; border-radius: 12px;
+}
+.cart_open_bg .cart_container p {
+  text-align: center; margin-bottom: 36px; font-size: 1rem;
+}
+.cart_open_bg .cart_container .link {display: flex; justify-content: center;}
+.cart_open_bg .cart_container .link a {
+  width: 210px; text-align: center; margin: 0 6px; padding: 16px 0;
+  border: 2px solid #1A1A1A; border-radius: 12px; font-size: 1.06rem; font-weight: 500; letter-spacing: -0.02em;
+}
+.cart_open_bg .cart_container .link a:nth-child(1) {color: #1A1A1A;}
+.cart_open_bg .cart_container .link a:nth-child(2) {color: #fff; background-color: #1A1A1A;
+}
