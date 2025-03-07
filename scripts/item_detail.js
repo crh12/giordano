@@ -193,6 +193,22 @@ const purSwiper = new Swiper('.pur_swiper', {
     nextEl:'.pur_swiper .next',
     prevEl:'.pur_swiper .prev',
   },
+  breakpoints:{ /* 반응형 */
+    1400:{
+      slidesPerView:4,
+      spaceBetween:(40 / 3),
+    },
+    1200:{/* 1200 이상 */
+      slidesPerView:3,
+      spaceBetween:8,
+    },
+    1000:{/* 1000 ~ 1199 사이 */
+    },
+    600:{/* 600 ~ 999 사이 */
+    },
+    0:{/* 0 ~ 599 */
+    },
+  }
 });
 
 const simSwiper = new Swiper('.sim_swiper', {
@@ -203,6 +219,22 @@ const simSwiper = new Swiper('.sim_swiper', {
     nextEl:'.sim_swiper .next',
     prevEl:'.sim_swiper .prev',
   },
+  breakpoints:{ /* 반응형 */
+    1400:{
+      slidesPerView:4,
+      spaceBetween:(40 / 3),
+    },
+    1200:{/* 1200 이상 */
+      slidesPerView:3,
+      spaceBetween:8,
+    },
+    1000:{/* 1000 ~ 1199 사이 */
+    },
+    600:{/* 600 ~ 999 사이 */
+    },
+    0:{/* 0 ~ 599 */
+    },
+  }
 });
 
 // ------------------------------------------------------------ 장바구니 안내 팝업

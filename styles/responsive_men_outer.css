@@ -11,12 +11,11 @@
     main .align_item_container .item_list li .item_price_like .sale_rate {font-size: 0.88rem;}
     main .align_item_container .item_list li .item_price_like .like {width: 14px; height: 14px;}
     main .align_item_container .page_container .page_num {font-size: 0.94rem;}
-    
 }
 /* 1200px ~ 1001px Tablet 시작*/
 @media screen and (max-width: 1200px) {
     main section {margin-bottom: 100px;}
-    main .path {padding: 16px 80px;}
+    main .path {padding: 16px 0;}
     main .title_menu_container {width: 18%;}
     main .align_item_container {width: 77%;}
     main .title_menu_container .cate_title {font-size: 1.75rem;}
@@ -30,7 +29,7 @@
 /* 1000px ~ 769px */
 @media screen and (max-width: 1000px) {
     main .path {display: none;}
-    main .title_menu_container {position: absolute; left: 80px; top: 0;}
+    main .title_menu_container {position: absolute; left: 0; top: 0;}
     main .align_item_container {width: 100%;}
     main .title_menu_container .menu {display: none;}
     main .title_menu_container .cate_title {padding-left: 0;}
@@ -44,8 +43,7 @@
 }
 /* 768px ~ 601px Mobile 시작 */
 @media screen and (max-width: 768px) {
-    main section {padding: 0 15px;}
-    main .title_menu_container {left: 15px;}
+    main {padding: 0 15px;}
     main .title_menu_container .cate_title {font-size: 1.50rem; padding: 20px 0 0;}
     main .align_item_container .total_align_wrap {padding: 24.5px 0;}
     main .align_item_container .total_align_wrap .item_num {font-size: 0.88rem;}
