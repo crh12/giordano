@@ -25,8 +25,8 @@ const cartBtn = document.querySelector('#cart_btn');
 const shoppingBtn = document.querySelector('.link a:nth-child(1)');
 
 let price = 89100; // 주문금액
-let number = 0; // 주문수량
-let orderPrice = 0; // 총 가격 저장 변수
+let number = 1; // 주문수량
+let orderPrice = 89100; // 총 가격 저장 변수
 
 let boolean = false;
 
@@ -52,13 +52,13 @@ function dMoreEvent(){
   }
 };
 
-
 // ------------------------------------------------------------ 초기세팅
 shareOpen.style.display = 'none';
 activeReset(color);
 activeReset(size);
-totalPrice.textContent = 0;
-productNum.value = 0;
+productNum.value = number;
+orderPrice = price * number;
+totalPrice.textContent = `${orderPrice.toLocaleString('ko-kr')}`;
 displayNone(filterPop);
 
 // ------------------------------------------------------------ 이벤트 실행

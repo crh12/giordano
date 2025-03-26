@@ -2,45 +2,45 @@ header .hd_bg {background-color: transparent;}
 header .hd_bg:hover {background-color: #fff;}
 /* -------------------------------------------------------------------------------------------- 메인 */
 main {}
-main .main_bnr {position: relative; width: 100%; transform:translateY(-80px); margin-bottom: 70px;} /* 사이 너백 150 - 헤더 높이 80 */
+main #main_bnr {position: relative; width: 100%; transform:translateY(-80px); margin-bottom: 70px;} /* 사이 너백 150 - 헤더 높이 80 */
 /* -------------------------------------------------------------------------------------------- 메인 슬라이더 (공통) */
-main .main_bnr .main_swiper {width: 100%; height: calc(100vh - 32px);}
-main .main_bnr .main_swiper .swiper-wrapper {}
-main .main_bnr .main_swiper .swiper-wrapper .swiper-slide {background-size: cover; background-position: center;}
-main .main_bnr .main_swiper .swiper-wrapper .swiper-slide .bnr_txt {}
-main .main_bnr .main_swiper .swiper-wrapper .swiper-slide .bnr_txt h1 {font-size: 2.75rem; font-weight: 500; letter-spacing: -0.02em;}
-main .main_bnr .main_swiper .swiper-wrapper .swiper-slide .bnr_txt h1:nth-of-type(2) {margin: 18px 0 35px;}
-main .main_bnr .main_swiper .swiper-wrapper .swiper-slide .bnr_txt p {font-size: 1.25rem; letter-spacing: -0.02em;}
+main #main_bnr .main_swiper {width: 100%; height: calc(100vh - 32px);}
+main #main_bnr .main_swiper .swiper-wrapper {}
+main #main_bnr .main_swiper .swiper-wrapper .swiper-slide {background-size: cover; background-position: center;}
+main #main_bnr .main_swiper .swiper-wrapper .swiper-slide .bnr_txt {}
+main #main_bnr .main_swiper .swiper-wrapper .swiper-slide .bnr_txt h1 {font-size: 2.75rem; font-weight: 500; letter-spacing: -0.02em;}
+main #main_bnr .main_swiper .swiper-wrapper .swiper-slide .bnr_txt h1:nth-of-type(2) {margin: 18px 0 35px;}
+main #main_bnr .main_swiper .swiper-wrapper .swiper-slide .bnr_txt p {font-size: 1.25rem; letter-spacing: -0.02em;}
 /* -------------------------------------------------------------------------------------------- 메인 슬라이더 (개별) */
-main .main_bnr .main_swiper .swiper-wrapper .slide1 {
+main #main_bnr .main_swiper .swiper-wrapper .slide1 {
   background-image: url(../images/slide_001.jpg);
 }
-main .main_bnr .main_swiper .swiper-wrapper .slide1 .bnr_txt {color: #fff; position: absolute; top:45%; left: 15%;}
-main .main_bnr .main_swiper .swiper-wrapper .slide2 {
+main #main_bnr .main_swiper .swiper-wrapper .slide1 .bnr_txt {color: #fff; position: absolute; top:45%; left: 15%;}
+main #main_bnr .main_swiper .swiper-wrapper .slide2 {
   background-image: url(../images/slide_002.jpg);
 }
-main .main_bnr .main_swiper .swiper-wrapper .slide2 .bnr_txt {color: #fff; position: absolute; top:45%; left: 15%;}
-main .main_bnr .main_swiper .swiper-wrapper .slide3 {
+main #main_bnr .main_swiper .swiper-wrapper .slide2 .bnr_txt {color: #fff; position: absolute; top:45%; left: 15%;}
+main #main_bnr .main_swiper .swiper-wrapper .slide3 {
   background-image: url(../images/slide_003.jpg);
 }
-main .main_bnr .main_swiper .swiper-wrapper .slide3 .bnr_txt {text-align: right; color: #fff; position: absolute; top: 45%; right: 20%;}
+main #main_bnr .main_swiper .swiper-wrapper .slide3 .bnr_txt {text-align: right; color: #fff; position: absolute; top: 45%; right: 20%;}
 /* -------------------------------------------------------------------------------------------- 진행바, 버튼 */
-main .main_bnr .swiper_progress {
+main #main_bnr .swiper_progress {
   max-width: 1920px; width: 100%; height: max-content; position: absolute; left: 50%; transform: translateX(-50%); bottom: 50px; z-index: 10;
   padding: 0 197px;
   display: flex; flex-flow: row nowrap; align-items: center; justify-content: space-between;
 }
-main .main_bnr .swiper_progress .progress_bar {position: relative; height: 2px; width: 100%; background-color: rgba(255, 255, 255, 0.2); margin-right: 36px;}
-main .main_bnr .swiper_progress .progress_bar .swiper-pagination-progressbar-fill {background-color: #fff;}
-main .main_bnr .swiper_progress .progress_btn {width: 90px; display: flex; justify-content: space-between;}
-main .main_bnr .swiper_progress .progress_btn > * {color: #fff;}
-main .main_bnr .swiper_progress .progress_btn button {width: 20px; height: 20px;}
-main .main_bnr .swiper_progress .progress_btn button img {width: 100%;}
-main .main_bnr .swiper_progress .progress_btn .next {margin-left: 10px; transform: scaleX(-1);}
-main .main_bnr .swiper_progress .progress_btn .prev {margin-right: 10px;}
-main .main_bnr .swiper_progress .progress_btn span {letter-spacing: -0.02em; margin-top: 1.5px;}
-main .main_bnr .swiper_progress .progress_btn .slide_current {margin-right: 4px;}
-main .main_bnr .swiper_progress .progress_btn .slide_total {margin-left: 3px;}
+main #main_bnr .swiper_progress .progress_bar {position: relative; height: 2px; width: 100%; background-color: rgba(255, 255, 255, 0.2); margin-right: 36px;}
+main #main_bnr .swiper_progress .progress_bar .swiper-pagination-progressbar-fill {background-color: #fff;}
+main #main_bnr .swiper_progress .progress_btn {width: 90px; display: flex; justify-content: space-between;}
+main #main_bnr .swiper_progress .progress_btn > * {color: #fff;}
+main #main_bnr .swiper_progress .progress_btn button {width: 20px; height: 20px;}
+main #main_bnr .swiper_progress .progress_btn button img {width: 100%;}
+main #main_bnr .swiper_progress .progress_btn .next {margin-left: 10px; transform: scaleX(-1);}
+main #main_bnr .swiper_progress .progress_btn .prev {margin-right: 10px;}
+main #main_bnr .swiper_progress .progress_btn span {letter-spacing: -0.02em; margin-top: 1.5px;}
+main #main_bnr .swiper_progress .progress_btn .slide_current {margin-right: 4px;}
+main #main_bnr .swiper_progress .progress_btn .slide_total {margin-left: 3px;}
 /* -------------------------------------------------------------------------------------------- container 공통 */
 main .container {max-width: 1760px; width: 100%; margin: 0 auto 120px; padding: 0 80px;}
 main .container .title {font-size: 2.19rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 30px;}

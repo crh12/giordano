@@ -1,15 +1,15 @@
 // ------------------------------------------------------------ 변수
 const allA = document.querySelectorAll('a')
 const hdBg = document.querySelector('.hd_bg');
-const mainSlide = document.querySelectorAll('.main_bnr .swiper-slide');
-const mainSlideTotal = document.querySelector('.main_bnr .slide_total');
-const mainSlideCurrent = document.querySelector('.main_bnr .slide_current');
-const mainBar = document.querySelector('.main_bnr .progress_bar');
+const mainSlide = document.querySelectorAll('#main_bnr .swiper-slide');
+const mainSlideTotal = document.querySelector('#main_bnr .slide_total');
+const mainSlideCurrent = document.querySelector('#main_bnr .slide_current');
+const mainBar = document.querySelector('#main_bnr .progress_bar');
 const container = document.querySelectorAll('.container');
 const like = document.querySelectorAll('main .like img')
 const bestCate = document.querySelectorAll('#best_ctnr .category li a');
 const newCate = document.querySelectorAll('#new_ctnr .category li a');
-const gCate = document.querySelectorAll('#gmtion_ctnr .category li a');
+const gCate = document.querySelectorAll('#gmotion_ctnr .category li a');
 const gSlideCurrent = document.querySelector('#gmotion_ctnr .slide_current');
 const mgzList = document.querySelector('.mgz_swiper .swiper-wrapper');
 const mgzSlides = document.querySelectorAll('.mgz_swiper .swiper-wrapper .swiper-slide');
@@ -17,8 +17,6 @@ const mgzSlides = document.querySelectorAll('.mgz_swiper .swiper-wrapper .swiper
 let boolean = false;
 
 mainSlideTotal.textContent = mainSlide.length;
-
-console.log(mgzList)
 
 // ------------------------------------------------------------ 함수
 function bestReset(){
@@ -61,8 +59,8 @@ const mainSwiper = new Swiper('.main_swiper',{
   autoplay:{delay:2500,},
   loop:true,
   navigation:{
-    nextEl:'.main_bnr .next',
-    prevEl:'.main_bnr .prev',
+    nextEl:'#main_bnr .next',
+    prevEl:'#main_bnr .prev',
   },
   on:{
     slideChange:function(){
@@ -70,7 +68,7 @@ const mainSwiper = new Swiper('.main_swiper',{
     }
   },
   pagination: {
-    el: '.main_bnr .progress_bar',
+    el: '#main_bnr .progress_bar',
     type: 'progressbar',
   },
 });
