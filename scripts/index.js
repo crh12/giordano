@@ -1,4 +1,5 @@
 // ------------------------------------------------------------ 변수
+const allA = document.querySelectorAll('a')
 const hdBg = document.querySelector('.hd_bg');
 const mainSlide = document.querySelectorAll('.main_bnr .swiper-slide');
 const mainSlideTotal = document.querySelector('.main_bnr .slide_total');
@@ -6,10 +7,10 @@ const mainSlideCurrent = document.querySelector('.main_bnr .slide_current');
 const mainBar = document.querySelector('.main_bnr .progress_bar');
 const container = document.querySelectorAll('.container');
 const like = document.querySelectorAll('main .like img')
-const bestCate = document.querySelectorAll('.best_container .category li a');
-const newCate = document.querySelectorAll('.new_container .category li a');
-const gCate = document.querySelectorAll('.gmotion_container .category li a');
-const gSlideCurrent = document.querySelector('.gmotion_container .slide_current');
+const bestCate = document.querySelectorAll('#best_ctnr .category li a');
+const newCate = document.querySelectorAll('#new_ctnr .category li a');
+const gCate = document.querySelectorAll('#gmtion_ctnr .category li a');
+const gSlideCurrent = document.querySelector('#gmotion_ctnr .slide_current');
 const mgzList = document.querySelector('.mgz_swiper .swiper-wrapper');
 const mgzSlides = document.querySelectorAll('.mgz_swiper .swiper-wrapper .swiper-slide');
 
@@ -171,11 +172,11 @@ const mdSwiper = new Swiper('.md_swiper',{
 const gSwiper = new Swiper('.g_swiper',{
   loop:true,
   navigation:{
-    nextEl:'.gmotion_container .next',
-    prevEl:'.gmotion_container .prev',
+    nextEl:'#gmotion_ctnr .next',
+    prevEl:'#gmotion_ctnr .prev',
   },
   pagination: {
-    el: '.gmotion_container .progress_bar',
+    el: '#gmotion_ctnr .progress_bar',
     type: 'progressbar',
   },
   on:{
