@@ -23,6 +23,7 @@ const filterPop = document.querySelectorAll('.filter li div');
 const cartPopup = document.querySelector('.cart_open_bg');
 const cartBtn = document.querySelector('#cart_btn');
 const shoppingBtn = document.querySelector('.link a:nth-child(1)');
+const pageList = document.querySelectorAll('.page_container .page_num');
 
 let price = 89100; // 주문금액
 let number = 1; // 주문수량
@@ -262,3 +263,13 @@ shoppingBtn.addEventListener('click',()=>{
   cartPopup.style.display = 'none';
   document.body.style.overflow = 'auto';
 });
+
+// ------------------------------------------------------------ 페이지 번호
+
+for(let i of pageList){
+  i.addEventListener('click', (e)=>{
+      e.preventDefault();
+      activeReset(pageList);
+      i.classList.add('active');
+  })
+};

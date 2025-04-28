@@ -66,7 +66,7 @@ header .hd_bg .user_nav li a img {width: 100%;}
 /* ------------------------------------------------------ 모바일 팝업 메뉴 */
 header .hd_bg .m_gnb {
   display: none; position: absolute; right: 0; top: 0; width: 300px; height: 100vh;
-  padding: 80px 80px 20px 30px; background-color: #fff;
+  padding: 112px 80px 20px 30px; background-color: #fff;
 }
 header .hd_bg .m_gnb a { /* 공통 a */ display: block; width: 100%;}
 header .hd_bg .m_gnb > li { /* hd대표메뉴 */ border-bottom: 1px solid #000;}

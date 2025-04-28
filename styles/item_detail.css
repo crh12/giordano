@@ -346,14 +346,14 @@ main .product .review_container .user_contents .r_write_wrap li .comment #helpfu
 main .product .review_container .user_contents .r_write_wrap li .comment a {font-size: 0.75rem; letter-spacing: -0.02em;}
 main .product .review_container .user_contents .r_write_wrap li .comment a img {width: 12px; margin-left: 6px;}
 /* ----------------------------------------------------------------------------- 리뷰란(페이지) */
-main .product .review_container .user_contents .r_page {width: 100%; display: flex; justify-content: center; align-items: center;}
-main .product .review_container .user_contents .r_page a {padding: 3px 8px 5px; margin-right: 6px; letter-spacing: -0.02em; border-radius: 4px; line-height: 16px;}
-main .product .review_container .user_contents .r_page a:last-child {margin: 0;}
-main .product .review_container .user_contents .r_page a.active {background-color: #1A1A1A; color: #fff; font-weight: 500; letter-spacing: -0.02em;}
-main .product .review_container .user_contents .r_page .page_prev {}
-main .product .review_container .user_contents .r_page .page_prev img {width: 100%; transform: translateY(1px) scaleX(-1);}
-main .product .review_container .user_contents .r_page .page_next {}
-main .product .review_container .user_contents .r_page .page_next img {width: 100%; transform: translateY(1px);}
+main .product .review_container .user_contents .page_container {width: 100%; display: flex; justify-content: center; align-items: center;}
+main .product .review_container .user_contents .page_container a {padding: 3px 8px 5px; margin-right: 6px; letter-spacing: -0.02em; border-radius: 4px; line-height: 16px;}
+main .product .review_container .user_contents .page_container a:last-child {margin: 0;}
+main .product .review_container .user_contents .page_container a.active {background-color: #1A1A1A; color: #fff; font-weight: 500; letter-spacing: -0.02em;}
+main .product .review_container .user_contents .page_container .page_prev {}
+main .product .review_container .user_contents .page_container .page_prev img {width: 100%; transform: translateY(1px) scaleX(-1);}
+main .product .review_container .user_contents .page_container .page_next {}
+main .product .review_container .user_contents .page_container .page_next img {width: 100%; transform: translateY(1px);}
 /* ----------------------------------------------------------------------------- 구매+비슷한 공통 슬라이드 */
 main .product .container .s_p_swiper {width: 100%;}
 main .product .container .s_p_swiper .swiper-wrapper {}

@@ -7,7 +7,6 @@ const mMenuLi = document.querySelectorAll('.m_menu > li > a'); /* 모바일 메�
 const mSubLi = document.querySelectorAll('.m_menu .sub_menu a'); /* 모바일 메뉴 - 소분류 */
 const mSubMenu = document.querySelectorAll('.m_menu .sub_menu'); /* 모바일 메뉴 - 소분류 그룹 */
 
-
 const alignList = document.querySelectorAll('.align_list a'); /* 정렬방식 */
 const filter = document.querySelector('.align_contents .filter'); /* 필터 */
 const layoutList = document.querySelectorAll('.align_contents .layout a'); /* 레이아웃 방식 */
